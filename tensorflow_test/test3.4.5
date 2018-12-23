@@ -1,0 +1,12 @@
+import tensorflow as tf
+from numpy.random import RandomState
+batch_size = 8 # the number of training data
+w1 = tf.Variable(tf.random_norml([2,3],stddev=1,seed=1))#the node's weight of the first layer of ANN
+w2 = tf.Variable(tf.random_normal([3,1],stddev=1,seed=1)) #the node's weight of the second layer of ANN
+x = tf.placeholder(tf.float32,shape = (None,2),name = 'x-input')
+y_ = tf.placehoder(tf.float32,shape = (None,1),name = 'y-input')
+a = tf.matmul(x,w1)
+y = tf.matmul(a,w2)
+
+y = tf.sigmoid(y)
+cross_entropy = -tf.reduce_mean
