@@ -3,14 +3,12 @@
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
+sys.path.append('../lib')
 #import pudb;pu.db
 from PLA import PerceptronPrimary as pla
 pla = pla()	
-path = sys.path[0]
-path = path.split('/')
-path.pop()
-path.extend(['data','iris.data'])
-path = '/'.join(path)
+path = pla.filePath()
+print path
 dataSet = pla.getRawData(path)[0]
 TrainSet,TestSet = pla.holdOut(dataSet)
 featureTrain,labelsTrain = pla.AnalyzeData(TrainSet)
