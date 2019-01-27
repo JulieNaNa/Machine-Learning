@@ -1,1 +1,2 @@
-1:在PLA模块中
+   1:在PLA-primary实现过程中，取iris.data前100个样本，其中前80个为训练集，后20个为测试集，在得到参数后，取前三列数据进行画图，发现得到的超平面和样本之间不匹配，如图，不知道是什么原因导致？
+  ![PLA_primary](https://github.com/JulieNaNa/Machine-Learning/edit/master/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/result/PLA_primary.png)
